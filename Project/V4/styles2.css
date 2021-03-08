@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+
+/*
+Author: Thomas Walker
+Date: 20210121
+File Name: Index.html
+Assignment: Project V1
+Purpose: Basics of Modules 1 and 2
+*/
+/* M6LO3 Demonstrate how to create a table (HTML, explain table's purpose; it needs to be appropriate 
+data for a table, and have at least 2 columns and 3 rows, appropriate use of thead/tbody/tfooter, and 
+cells using th/td appropriately) 
+
+M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall 
+impact they have on the HTML)*/
+table.Standings thead {
+    color:rgb(255, 255, 255); color: hsl(0, 0, 0);
+   background: rgb(8, 8, 8);
+  
+}
+
+
+
+table.Standings tbody{
+    background: rgb(250, 250, 250)
+}
+
+tbody th{
+    background:rgb(221, 221, 221);
+}
+
+table.Standings thead tr{
+    height:80px;
+}
+table.Standings tbody tr{
+    height: 50px;
+}
+col.eastdivision {
+   width: 8%;
+}

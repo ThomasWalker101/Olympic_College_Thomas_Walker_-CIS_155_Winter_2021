@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+
+/*
+Author: Thomas Walker
+Date: 20210121
+File Name: Index.html
+Assignment: Project V1
+Purpose: Basics of Modules 1 and 2
+*/
+
+/*M1LO8 Demonstrate the use of external style sheets (HTML, note the external style sheet must exist and contain CSS): 
+This is the style sheet. 
+
+M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times, once where precedence 
+is applied and once where inheritance is applied; see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)
+precedence and inheritance are what they sound like.  Styles have precedence within a document, you can have a broad scope 
+which has low precedence and you can go all the way down to inline style which has the highest precedence. Inheritance is what it
+sounds like as well. If you share a similar defining characteristic it will get a similar style if listed in the stylesheet. 
+
+M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times, once each for embedded 
+and inline styles; note external was taken care of with M1LO8; see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+The document has multiple examples of these.  
+
+M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown 
+in Figure 2-12, Contextual Selectors, of the textbook)
+Contextual selectors: A contextual selector matches when an element is an arbitrary descendent of some ancestor element 
+A contextual selector is made up of 2 or more selectors separated by white space. A contextual selector may also contain 
+attribute selectors.
+
+M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b 
+Attribute selectors)
+I used an ID to create the link to the top of the page. I used a selector several places. 
+
+M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)
+Did this several places below.  The color system on VSC is actually really easy to work with.   */
+
+html {background-color: rgb(211, 211, 211);}
+/* M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements 
+rather than impacting text on the page)
+CSS allows a user to change the color, shape font etc of a document.
+
+M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 Employing Progressive Enhancement)
+Progressive enhancement allows for older browsers to be able to read the color of a page by using the older
+format first.  From the book, if an older browser can't recognize HSL it will instead read the RGB first and utilize it. 
+M4LO4 Demonstrate the use of gradients (CSS)
+*/
+body {
+   color:rgb(0, 0, 0); color: hsl(0, 0, 0);
+   background: linear-gradient( white, grey, black);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   float: left;
+   
+}
+
+
+/*M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is 
+rendered on the page) 
+Textual would be the font below that I changed. 
+
+M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is) Impact was to move my 
+Footer back to where it belonged
+
+M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML) 
+this forces the footer to always be at the bottom. 
+*/
+footer {color: rgb(0, 0, 0);
+      background-color: rgb(215, 252, 204);
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      float: center;
+      clear: both;
+      width: 100%;
+      position: absolute bottom;
+      
+      }
+
+         /* M2LO6  
+         M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML) 
+          this moved the #reviews slightly to the left*/
+#reviews {color:rgb(77, 76, 76);
+   position: relative left: 25px;
+   float: right;
+   width: 25%;
+   text-align: right;
+   overflow-wrap: break-word;
+   border: 4px double rgb(0, 0, 0);
+      }
+
+      /* M3LO2 Demonstrate floating elements (CSS, note where you have specified a floating element and what its impact is)
+      M3LO10 Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML)
+      M4LO3 Demonstrate the use of rounded corners for borders (CSS)
+      */
+div > aside  {  
+      overflow:hidden;
+      position: relative;
+      float: right;
+      width: 25%;
+      text-align: right;
+      overflow-wrap: break-word;
+      border: 4px double rgb(0, 0, 0);
+     border-radius: 50px 50px;
+      }
+
+p {color:rgb(245, 0, 0)}
+
+/* M2LO7 Demonstrate a CSS attribute selector other than class or id (CSS, specify 1 time, see 2-9b Attribute selectors)
+*/
+a[href] {font-family: Georgia, 'Times New Roman', Times, serif;}
+/*M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times, show one pseudo-class and one 
+pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements) 
+attempted this here but it didn't work, i will ask you in class on Monday */
+article#index.html ol li:first-of-type {list-style-image: url(memes.jpg);}
+/* M4LO2 Demonstrate the use of background images (CSS) 
+M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML)*/
+div > article {
+   float: left;
+   width: 25%;
+   background-image: url(pole.png); 
+   background-repeat: round;
+   box-shadow: black 15px 0px 25px,
+               black -15px 0px 25px;
+}
+
+/* M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS) 
+M4LO8 Demonstrate the use of transformations for 2D or 3D images (CSS, note one of these two in your CSS and explain its impact on the HTML*/
+figure {
+   opacity: 0.85;
+   margin-left: 100%;
+}
+
+/* M3LO1 Demonstrate the use of a CSS reset style sheet (CSS, note where you have CSS reset rules) */
+/* Structural Styles */
+article, aside, figcaption, figure, header, main, nav, section {
+   display:block;
+}
+
+article, aside, blockquote, body, cite, div, h1, h2, h3, h4, h5, h6, header, html, img, li,
+nav, ol, p, section, ul {
+   font-size: 100%;
+   margin: 0;
+   padding: 0;
+
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+body {
+   line-height: 1;
+}
+
+nav{
+   border:1px solid rgb(241, 241, 243);
+   background-color:rgb(43, 196, 243);
+   border-width:1px 0;
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+   
+}
+nav li{
+   display:inline;
+}
+nav a{
+   display:inline-block;
+   padding:10px;
+}
+/* M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit use of one of 
+the three in your CSS and what the impact is on the HTML)*/
+body > header {
+   text-align: center;
+   position:static;
+   
+}
+/* M5LO3 Use media queries to format a page differently for phones vs. PCs. 
+(CSS, note where these are in your CSS and describe the overall impact they have on the site) */
+@media handheld {
+max-width: 480px;
+}
+@media screen{
+   min-width: 400px;
+}
+/* M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) 
+(CSS, note where the menu is on your site and how it behaves)  creates pull down for main topics.  */
+ul.submenu{
+   display: none;
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover{
+   display: block;
+}
+
+ 
+/* M8LO12 Demonstrate how to format media with CSS (CSS, group your media styles together and describe their overall 
+      impact on the media feature of your page */
+video {
+   display: block;
+   margin: 5px;
+   width: 50%;
+}

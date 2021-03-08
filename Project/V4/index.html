@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!--
+Author: Thomas Walker
+Date: 20210121
+File Name: Index.html
+Assignment: Project V1
+Purpose: Basics of Modules 1 and 2
+   -->
+
+   <!--M1LO6: Demonstrate the use of basic HTML tags to create a simple Web page (HTML, this item should be specified once, 
+      describing how the file it is in meets this outcome): I have used the basic Tags to create a webpage, including Doctype, 
+      html, head,  meta charset, title, Header, Body, img src, h1, strong, 
+      nav article aside and footer.
+   -->
+   <meta charset="utf-8" />
+
+   <meta name="keywords" content="Hockey, NHL, Fantasy Sports" />
+
+   <title>Buckets Off Hockey </title>
+   <meta name="description" content="Buckets Off Hockey">
+   <link href="styles.css" media="all" rel="stylesheet" />
+
+</head>
+
+<body id="home">
+  
+   <header>
+      <!--M1LO9 Demonstrate the use of inline images (HTML): below is an inline image, the code allows for my facebook page's 
+         main image to be displayed. 
+         M4LO7 Demonstrate the use of image maps, including determining x and y values (HTML)
+      -->
+      <a href="https://www.facebook.com/BucketsOffHockey"><img src="BucketsOffHockeyimg.jpg" alt="Buckets Off Hockey" /></a>
+      <map name="bucketsoffhockey">
+         <area shape="rect" coords="14,16,661,652" href="BucketsOffHockeyimg.jpg" alt="welcome" />
+      </map>
+      <h1><strong>Welcome to Buckets off Hockey!</strong></h1> 
+
+   </header>
+   <div>
+   <nav><!--M1LO12  Create navigation using unordered lists (HTML)  The unordered list allows for me to input links
+   without creating an ordering system. -->
+      <li><a href="#" class="submenuTitle"> navigation</a>
+         <ul class=submenu>
+         <li><a href="index.html">Main</a></li>
+         <li><a href="about.html"> About</a></li>
+         <li><a href="table.html"> Standings</a></li>
+
+         <!--M1LO10 Demonstrate the use of special characters from extended character sets (HTML, use entities, 
+            not cut-and-pasted unicode characters)  I used &#127760 on the link to my facebook page. it creates the Internet symbol. 
+
+
+            M1LO13  Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external 
+            (HTML, this item should be specified 3 times, once on each type of link).  The 3 types are listed, I have links
+            to my facebook page (external) I have links to other pages that are a part of my site (site navigation) and I have
+            a back to top button (targeted location using ids)
+         
+         -->
+         <li> &#127760; <a href="https://www.facebook.com/BucketsOffHockey">Buckets Off Hockey Facebook</a></li>
+      </ul>
+      </li>
+   </nav>
+</div>
+   <div>
+      <article>
+      <h1><strong>Take a Seat and Enjoy</strong></h1>
+    
+     </figure>
+         <p>Welcome to one of the fastest growing Hockey Pages on the internet. Make sure to check out our 
+               Facebook page for news and up to date content.</p>
+         <p><h1>This page will contain</h1>
+            <ol> <!-- M1LO7 Demonstrate the use of ordered lists (HTML): ol creates an ordered list and li are the list elements
+            within -->
+               <li><a href="memes.html">Memes</a></li>
+               <li>Trades</li>
+               <li>News</li>
+               <li>Fantasy Stats</li>
+            </ol>
+         </p>
+      
+       
+      
+      
+   </article>
+   </div>
+   <!-- M8LO8 Demonstrate the use of the <video> element for embedding video in a Web page (HTML))
+      M8LO9  Demonstrate the use of the iframe element (HTML)-->
+      <iframe width="360" height="280" src="https://www.youtube.com/watch?v=_gpE3lHc-84" frameborder="0" allowfullscreen>
+</iframe>
+<video controls poster="oreilly.jpg">
+   <source src="Lazlo.mp4" type="video/mp4" />
+   <source src="Lazlo.webm" type="video/webm" />
+</video>
+   <div>
+   <aside>
+      <h1 id="reviews">Reviews</h1><br><br>
+
+      <p><q>It’s a great site. It’s really about hockey and is quite interesting and entertaining!</q> <cite>-TJ Desmond</cite><br>
+      
+      <p><q>Yes. I just discovered this page and it’s already clear to me it’s run by a bunch of real <br>
+      fellow puck heads. This page is a beauty. Unlike most other hockey pages run by a bunch of dusters <br>
+      and squids. Rock on. <cite>-Kyle Cowden</cite></p><br>
+      
+      <p><q>its all about hockey it shows the funny side of hockey</q> <cite>-Jean Werdan-Kiehn</cite></p><br>
+      
+   </aside>
+   </div>
+   <!--M1LO13 -->
+
+      
+   <footer>
+      <a href="index.html" target=_top id="return">Return to top of page</a><br>
+      Buckets Off Hockey &#9830; &nbsp; Middle of the Ocean, #1 Gordie Howe Lane.   &#9830; 
+      <a href="tel:+11118675309">1-111-867-5309</a>
+   </footer>
+   
+
+</body>
+
+</html>
